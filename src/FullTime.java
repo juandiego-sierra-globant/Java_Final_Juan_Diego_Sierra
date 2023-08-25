@@ -1,10 +1,10 @@
-public class fullTime extends Teacher {
+public class FullTime extends Teacher {
     private String name;
 
     private double baseSalary;
     private int experienceYears;
 
-    public fullTime(String name, double baseSalary, int experienceYears) {
+    public FullTime(String name, double baseSalary, int experienceYears) {
         super(name);
         this.baseSalary = baseSalary;
         this.experienceYears = experienceYears;

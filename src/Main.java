@@ -10,12 +10,12 @@ public class Main {
         int option = 0;
 
         // Initialize Full Time teachers
-        Teacher teacher1 = new fullTime("Ariana Grande", 6000, 8);
-        Teacher teacher2 = new fullTime("Taylor Swift", 5500, 4);
+        Teacher teacher1 = new FullTime("Ariana Grande", 6000, 8);
+        Teacher teacher2 = new FullTime("Taylor Swift", 5500, 4);
 
         // Initialize Part Time teachers
-        Teacher teacher3 = new partTime("Beyoncé", 25, 15);
-        Teacher teacher4 = new partTime("Ed Sheeran", 30, 20);
+        Teacher teacher3 = new PartTime("Beyoncé", 25, 15);
+        Teacher teacher4 = new PartTime("Ed Sheeran", 30, 20);
 
         // Initialize students
         Student student1 = new Student("Emma Watson", 10, 21);
