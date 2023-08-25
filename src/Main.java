@@ -2,22 +2,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Iniciar el programa mostrando el menú
+        // Start the program by displaying the menu
         showMenu();
     }
 
     public static void showMenu() {
         int option = 0;
 
-        // Inicializar profesores de Full Time
+        // Initialize Full Time teachers
         Teacher teacher1 = new fullTime("Ariana Grande", 6000, 8);
         Teacher teacher2 = new fullTime("Taylor Swift", 5500, 4);
 
-        // Inicializar profesores de Part Time
+        // Initialize Part Time teachers
         Teacher teacher3 = new partTime("Beyoncé", 25, 15);
         Teacher teacher4 = new partTime("Ed Sheeran", 30, 20);
 
-        // Inicializar estudiantes
+        // Initialize students
         Student student1 = new Student("Emma Watson", 10, 21);
         Student student2 = new Student("Tom Holland", 20, 22);
         Student student3 = new Student("Lily Collins", 30, 23);
@@ -26,27 +26,27 @@ public class Main {
         Student student6 = new Student("Miley Cyrus", 60, 24);
         int lastID = 60;
 
-        // Inicializar arreglos de estudiantes para cada clase
+        // Initialize arrays of students for each class
         ArrayList<Student> arrayClass1 = new ArrayList<>();
         ArrayList<Student> arrayClass2 = new ArrayList<>();
         ArrayList<Student> arrayClass3 = new ArrayList<>();
         ArrayList<Student> arrayClass4 = new ArrayList<>();
 
-        //Inicializar arreglo de estudiantes en total
+        // Initialize overall student array
         ArrayList<Student> totalStudents = new ArrayList<>();
         totalStudents.add(student1);
         totalStudents.add(student2);
         totalStudents.add(student3);
         totalStudents.add(student4);
 
-        //Inicializar arreglo de profesores en total
+        // Initialize overall teacher array
         ArrayList<Teacher> totalTeachers = new ArrayList<>();
         totalTeachers.add(teacher1);
         totalTeachers.add(teacher2);
         totalTeachers.add(teacher3);
         totalTeachers.add(teacher4);
 
-        //Estudiantes inscritos en cada clase
+        // Students enrolled in each class
         arrayClass1.add(student1);
         arrayClass1.add(student2);
         arrayClass2.add(student3);
@@ -56,7 +56,7 @@ public class Main {
         arrayClass4.add(student2);
         arrayClass4.add(student4);
 
-        // Inicializar clases y lista de clases
+        // Initialize subjects and subject list
         Subject class1 = new Subject("Math Class", teacher1.getName(), arrayClass1,"A1");
         Subject class2 = new Subject("Literature Class", teacher2.getName(), arrayClass2, "B2");
         Subject class3 = new Subject("Physics Class", teacher3.getName(), arrayClass3, "C3");
@@ -69,7 +69,7 @@ public class Main {
         classList.add(class4);
 
         do {
-            // Mostrar el menú principal
+            // Display the main menu
             System.out.println("Menu:");
             System.out.println("1. Print all the professors with their data");
             System.out.println("2. Print all the classes");
@@ -82,14 +82,14 @@ public class Main {
 
             switch (option) {
                 case 1:
-                    // Mostrar información de profesores
+                    // Display teacher information
                     teacher1.displayInfo();
                     teacher2.displayInfo();
                     teacher3.displayInfo();
                     teacher4.displayInfo();
                     break;
                 case 2:
-                    // Mostrar información de las clases
+                    // Display class information
                     int subjectName = 1;
                     for (Subject subject : classList) {
                         System.out.print("Class "+subjectName +"-> ");
@@ -104,7 +104,7 @@ public class Main {
                     classList.get(option2).printData();
                     break; // a
                 case 3:
-                    // Agregar nuevo estudiante a clase existente
+                    // Add a new student to an existing class
                     int subjectName2 = 1;
                     System.out.println("Type name of the student");
                     Scanner st = new Scanner(System.in);
@@ -114,7 +114,7 @@ public class Main {
                     System.out.println("Type age of the student");
                     int newAge = st.nextInt();
 
-                    // Mostrar opciones de clases
+                    // Display class options
                     System.out.println("Which class is the student going to be added:");
                     for (Subject subject : classList) {
                         System.out.print("Class "+ subjectName2 +"-> ");
@@ -122,7 +122,7 @@ public class Main {
                         subjectName2 = subjectName2 +1;
                     }
 
-                    // Agregar estudiante y actualizar listas
+                    // Add student and update lists
                     int newClass = st.nextInt();
                     newClass = newClass -1 ;
                     Student newStudents = new Student(newStudent, newID, newAge);
@@ -133,14 +133,14 @@ public class Main {
                     break;
 
                 case 4:
-                    // Crear una nueva clase y agregar profesor y estudiantes
+                    // Create a new class and add teacher and students
                     System.out.println("Type name of the subject:");
                     Scanner sb = new Scanner(System.in);
                     String newSubject = sb.nextLine();
                     System.out.println("Type classroom:");
                     String newClassroom = sb.nextLine();
 
-                    // Mostrar opciones de profesores
+                    // Display teacher options
                     System.out.print("1. ");
                     teacher1.displayInfo();
                     System.out.print("2. ");
@@ -154,7 +154,7 @@ public class Main {
                     newTeacher--;
                     ArrayList<Student> arrayClassNew = new ArrayList<>();
 
-                    // Agregar estudiantes a la nueva clase
+                    // Add students to the new class
 
                     int Option = 1;
                     while(Option !=2) {
