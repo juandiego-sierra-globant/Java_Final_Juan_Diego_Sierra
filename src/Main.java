@@ -102,7 +102,7 @@ public class Main {
                     int option2= ss.nextInt();
                     option2 = option2 - 1;
                     classList.get(option2).printData();
-                    break;
+                    break; //
                 case 3:
                     // Agregar nuevo estudiante a clase existente
                     int subjectName2 = 1;
